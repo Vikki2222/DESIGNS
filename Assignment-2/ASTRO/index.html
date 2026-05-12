@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTRO – Winter Armor II</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-logo">ASTRO<span>.</span></div>
+
+    <ul class="nav-links">
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Category</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <button aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+        </svg>
+      </button>
+      <button aria-label="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+      <button aria-label="Account">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── PAGE WRAPPER ──────────────────────── -->
+  <div class="page-wrapper">
+
+    <!-- Orange-framed product card -->
+    <div class="product-frame">
+
+      <!-- ─── MAIN 3-COLUMN SECTION ─────────── -->
+      <div class="product-main">
+
+        <!-- LEFT: Info -->
+        <div class="product-info">
+          <span class="badge-new">New</span>
+
+          <h1 class="product-title">
+            Astro<br>Winter<br>Armor <em>II</em>
+          </h1>
+
+          <p class="product-price">$560</p>
+
+          <div class="divider"></div>
+
+          <div class="description-block">
+            <h4>Description</h4>
+            <p>A next-gen cold war jacket. The essence of retro style and the resilience you need for extreme winter conditions. Engineered to provide versatile function for your winter wardrobe, accented with strategic utility details.</p>
+            <button class="read-more">
+              Read More
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Material &amp; Care
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Shipping &amp; Returns
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- CENTER: Product Image -->
+        <div class="product-image-wrap">
+         <img src="./assets/Screenshot from 2026-05-12 13-36-19.png">
+            <!-- Body -->
+            <path d="M60 140 C55 160 45 200 42 260 L278 260 C275 200 265 160 260 140 C240 130 210 124 200 120 L200 90 C195 105 185 115 160 118 C135 115 125 105 120 90 L120 120 C110 124 80 130 60 140Z"
+              fill="#E8DDD0" stroke="#C8B5A0" stroke-width="1.5"/>
+            <!-- Hood -->
+            <path d="M120 90 C118 70 118 50 130 38 C140 28 155 24 160 24 C165 24 180 28 190 38 C202 50 202 70 200 90 C195 105 185 115 160 118 C135 115 125 105 120 90Z"
+              fill="#E0D0BC" stroke="#C8B5A0" stroke-width="1.5"/>
+            <!-- Hood inner orange -->
+            <path d="M128 88 C126 72 127 55 136 44 C143 36 155 32 160 32 C165 32 177 36 184 44 C193 55 194 72 192 88"
+              fill="#E8561A" opacity="0.9"/>
+            <!-- Left sleeve -->
+            <path d="M60 140 C50 145 30 160 20 185 C14 200 16 220 22 230 C30 242 42 238 50 228 C56 220 58 208 62 195 L78 165 Z"
+              fill="#E8DDD0" stroke="#C8B5A0" stroke-width="1.5"/>
+            <!-- Right sleeve -->
+            <path d="M260 140 C270 145 290 160 300 185 C306 200 304 220 298 230 C290 242 278 238 270 228 C264 220 262 208 258 195 L242 165 Z"
+              fill="#E8DDD0" stroke="#C8B5A0" stroke-width="1.5"/>
+            <!-- Zipper line -->
+            <line x1="160" y1="118" x2="160" y2="258" stroke="#333" stroke-width="3" stroke-dasharray="6 4"/>
+            <!-- Center circle detail -->
+            <circle cx="160" cy="185" r="28" stroke="#C8A882" stroke-width="1.5" fill="none"/>
+            <circle cx="160" cy="185" r="18" stroke="#E8561A" stroke-width="2" fill="none"/>
+            <!-- Tech lines detail -->
+            <line x1="100" y1="170" x2="132" y2="170" stroke="#C8A882" stroke-width="1"/>
+            <line x1="100" y1="180" x2="130" y2="180" stroke="#C8A882" stroke-width="1"/>
+            <line x1="188" y1="170" x2="220" y2="170" stroke="#C8A882" stroke-width="1"/>
+            <line x1="190" y1="180" x2="220" y2="180" stroke="#C8A882" stroke-width="1"/>
+            <!-- Left pocket -->
+            <rect x="78" y="216" width="50" height="32" rx="5" fill="#D8CCB8" stroke="#C0AD98" stroke-width="1.2"/>
+            <!-- Right pocket -->
+            <rect x="192" y="216" width="50" height="32" rx="5" fill="#D8CCB8" stroke="#C0AD98" stroke-width="1.2"/>
+            <!-- Arm pocket orange -->
+            <rect x="244" y="165" width="28" height="20" rx="4" fill="#E8561A"/>
+            <!-- Cuffs -->
+            <path d="M19 228 Q12 240 20 248 Q28 255 38 246 L50 228Z" fill="#C8A872" stroke="#B09060" stroke-width="1"/>
+            <path d="M301 228 Q308 240 300 248 Q292 255 282 246 L270 228Z" fill="#C8A872" stroke="#B09060" stroke-width="1"/>
+            <!-- Bottom hem -->
+            <rect x="42" y="250" width="236" height="12" rx="4" fill="#C8A872" opacity="0.7"/>
+          </svg>
+
+          <!-- Feature badges -->
+          <div class="image-features">
+            <div class="feat-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
+                <path d="M8 12s.5-3 4-3 4 3 4 3"/>
+                <line x1="12" y1="2" x2="12" y2="5"/>
+                <line x1="12" y1="19" x2="12" y2="22"/>
+              </svg>
+              Extreme Warmth
+            </div>
+            <div class="feat-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              Wind Resistant
+            </div>
+            <div class="feat-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              Lightweight
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Options -->
+        <div class="product-options">
+
+          <!-- SIZE -->
+          <div class="options-section">
+            <h4>Size</h4>
+            <div class="size-grid">
+              <button class="size-btn">S</button>
+              <button class="size-btn active">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+            <a class="size-guide-link" href="#">Size Guide &rsaquo;</a>
+          </div>
+
+          <!-- COLOR -->
+          <div class="options-section">
+            <h4>Color</h4>
+            <div class="color-grid">
+              <div class="color-swatch active" onclick="selectColor(this)">
+                <img src="./assets/image.png">
+                <span class="color-label">Beige</span>
+              </div>
+              <div class="color-swatch" onclick="selectColor(this)">
+                <img src="./assets/red.png">
+                <span class="color-label">Red</span>
+              </div>
+              <div class="color-swatch" onclick="selectColor(this)">
+                <img src="./assets/black.png">
+                <span class="color-label">Black</span>
+              </div>
+              <div class="color-swatch" onclick="selectColor(this)">
+                <img src="./assets/white.png">
+                <span class="color-label">White</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-group">
+            <button class="btn-wishlist">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+              Add to Wishlist
+            </button>
+            <button class="btn-add-bag">
+              Add to Bag
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div><!-- /product-main -->
+
+      <!-- ─── FEATURES STRIP ──────────────────── -->
+      <div class="features-strip">
+
+        <div class="feature-card">
+          <div class="feature-img">
+            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:76px;height:76px;background:#E8DDD0">
+              <path d="M20 55 C20 40 30 30 38 25 C46 30 56 40 56 55" fill="#C8A882" opacity="0.6"/>
+              <circle cx="38" cy="22" r="5" fill="#E8561A"/>
+              <path d="M28 48 Q38 38 48 48" stroke="#E8561A" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>3X Water&#8209;Repellent</h3>
+            <p>The fabric repels rain, snow and moisture while keeping you dry and comfortable.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-img">
+            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:76px;height:76px;background:#E8DDD0">
+              <rect x="18" y="22" width="40" height="32" rx="8" fill="#D4C4B0"/>
+              <rect x="24" y="28" width="28" height="20" rx="5" fill="#C8B09A"/>
+              <circle cx="38" cy="38" r="6" fill="#E8561A"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>3D Areas Puffered</h3>
+            <p>Strategically padded zones trap heat and maximize insulation without the bulk.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-img">
+            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:76px;height:76px;background:#E8DDD0">
+              <circle cx="38" cy="30" r="10" fill="#C8A882"/>
+              <path d="M22 58 C22 46 30 42 38 42 C46 42 54 46 54 58Z" fill="#C8A882"/>
+              <circle cx="38" cy="30" r="6" fill="#E8DDD0"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Insulation</h3>
+            <p>Advanced thermal filling locks in warmth up to -30°C for extreme conditions.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-img">
+            <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:76px;height:76px;background:#E8DDD0">
+              <rect x="22" y="28" width="32" height="22" rx="5" fill="#C8A882"/>
+              <rect x="26" y="32" width="10" height="14" rx="3" fill="#E8561A"/>
+              <rect x="40" y="32" width="10" height="14" rx="3" fill="#D4C4B0"/>
+              <line x1="36" y1="22" x2="36" y2="28" stroke="#C8A882" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Utility Pockets</h3>
+            <p>Multi-functional pockets for secure storage on the go.</p>
+          </div>
+        </div>
+
+      </div><!-- /features-strip -->
+
+      <!-- ─── BOTTOM BAR ──────────────────────── -->
+      <div class="bottom-bar">
+
+        <div class="bar-item">
+          <div class="bar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <path d="M9 9h6v6H9z"/>
+            </svg>
+          </div>
+          <div class="bar-text">
+            <h5>Premium Fabrics</h5>
+            <p>Durable, high-performance materials.</p>
+          </div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+          </div>
+          <div class="bar-text">
+            <h5>Thermal Protection</h5>
+            <p>Built for extreme winter climates.</p>
+          </div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div class="bar-text">
+            <h5>Designed for Function</h5>
+            <p>Every detail serves a purpose.</p>
+          </div>
+        </div>
+
+        <div class="bar-item">
+          <div class="bar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="bar-text">
+            <h5>Limited Edition</h5>
+            <p>Exclusive drops, limited quantities.</p>
+          </div>
+        </div>
+
+      </div><!-- /bottom-bar -->
+
+    </div><!-- /product-frame -->
+  </div><!-- /page-wrapper -->
+
+  <script>
+    // Size selection
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Color selection
+    function selectColor(el) {
+      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    // Add to bag feedback
+    document.querySelector('.btn-add-bag').addEventListener('click', function() {
+      this.textContent = '✓ Added!';
+      this.style.background = '#2E7D32';
+      setTimeout(() => {
+        this.innerHTML = `Add to Bag <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>`;
+        this.style.background = '';
+      }, 1800);
+    });
+  </script>
+
+</body>
+</html>
