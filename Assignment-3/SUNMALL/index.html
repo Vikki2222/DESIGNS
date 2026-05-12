@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunMall</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Sun<span>Mall</span></div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CHIPS</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="search-bar">
+          <i class="ri-search-line"></i>
+          <input type="text" placeholder="Search for chips..." />
+        </div>
+        <div class="cart-icon">
+          <i class="ri-shopping-bag-fill"></i>
+          <span class="badge">4</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="hero-left">
+      <div class="pill"><i class="ri-star-fill"></i> 100% REAL INGREDIENTS</div>
+      <h1>EAT OUR <span>GRILLED</span><br>POTATO CHIPS</h1>
+      <p class="desc">Satisfying savory Chinese meat sauce chips<br>without any hard-to-find ingredients.</p>
+      <div class="actions">
+        <button class="add-btn">
+          <span class="btn-icon"><i class="ri-shopping-basket-line"></i></span>
+          ADD TO CART
+        </button>
+        <div class="qty">
+          <button id="minus">−</button>
+          <span id="count">2</span>
+          <button id="plus">+</button>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feat-item">
+          <div class="feat-icon green"><i class="ri-leaf-fill"></i></div>
+          <div><strong>100% Natural</strong><p>No artificial flavors</p></div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon orange"><i class="ri-fire-fill"></i></div>
+          <div><strong>Oven Grilled</strong><p>Not fried</p></div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon red"><i class="ri-heart-fill"></i></div>
+          <div><strong>Tasty & Crunchy</strong><p>Irresistible bite</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-center">
+      <div class="img-placeholder">
+        <i class="ri-image-line"></i>
+        <img src="./assets/image.png" alt="chips"> 
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="flavour-item">
+        <div class="f-dot" style="background:#1f7a45;"><i class="ri-fire-fill"></i></div>
+        <div><h4>Extra Chili</h4><p>Zha Jiang mian is crazy hot even when it's simplified</p></div>
+      </div>
+      <div class="f-divider"></div>
+      <div class="flavour-item">
+        <div class="f-dot" style="background:#ef233c;"><i class="ri-restaurant-fill"></i></div>
+        <div><h4>Beef Flavour</h4><p>Comes with a lot extra energy calories and Oxizen</p></div>
+      </div>
+      <div class="f-divider"></div>
+      <div class="flavour-item">
+        <div class="f-dot" style="background:#f4b400;"><i class="ri-star-fill"></i></div>
+        <div><h4>Smokey Sauce</h4><p>The meat sauce is kind of reminiscent of a Chinese.</p></div>
+      </div>
+    </div>
+
+  </main>
+
+  <section class="bottom">
+    <div class="bottom-left">
+      <h2>OUR TOP<br>FLAVOURS</h2>
+      <div class="line-dec">
+        <span class="line-long"></span>
+        <span class="line-dot"></span>
+      </div>
+      <div class="arrows">
+        <button class="arrow-btn"><i class="ri-arrow-left-line"></i></button>
+        <button class="arrow-btn active"><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./assets/image 2.png" alt="chips"> 
+        </div>
+        <div class="card-info">
+          <h3>BLACK BARBECUE</h3>
+          <div class="stars">★★★★★ <span>(4.8)</span></div>
+          <div class="price">$12.30</div>
+          <button class="order-btn">ORDER NOW <i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+
+      <div class="card dark">
+        <div class="card-img">
+          <img src="./assets/image.png" alt="chips"> 
+        </div>
+        <div class="card-info">
+          <h3>MR. POTATO</h3>
+          <div class="stars">★★★★★ <span>(4.9)</span></div>
+          <div class="price">$15.89</div>
+          <button class="order-btn">ORDER NOW <i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./assets/image 3.png" alt="chips"> 
+        </div>
+        <div class="card-info">
+          <h3>TOM YOMM</h3>
+          <div class="stars">★★★★☆ <span>(4.7)</span></div>
+          <div class="price">$11.50</div>
+          <button class="order-btn">ORDER NOW <i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const countEl = document.getElementById('count');
+    let n = 2;
+    document.getElementById('minus').addEventListener('click', () => { if (n > 1) countEl.textContent = --n; });
+    document.getElementById('plus').addEventListener('click', () => { countEl.textContent = ++n; });
+  </script>
+
+</body>
+</html>
