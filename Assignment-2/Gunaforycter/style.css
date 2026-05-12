@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:         #111010;
+  --card-bg:    #181614;
+  --card-bg2:   #1C1A17;
+  --gold:       #C8782A;
+  --gold-light: #E09A4A;
+  --gold-glow:  rgba(200,120,42,0.18);
+  --white:      #FFFFFF;
+  --gray:       #8A8278;
+  --border:     rgba(255,255,255,0.07);
+  --serif:      'Playfair Display', Georgia, serif;
+  --sans:       'Lato', sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+/* ─── PAGE WRAPPER ───────────────────────────── */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+/* ─── HEADER ─────────────────────────────────── */
+.site-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.site-header h1 {
+  font-family: var(--serif);
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* Ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.ornament-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.ornament-line.right {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.ornament-icon {
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+}
+
+.ornament-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ─── DRINKS GRID ────────────────────────────── */
+.drinks-grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ─── DRINK CARD ─────────────────────────────── */
+.drink-card {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 22px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+  overflow: hidden;
+}
+
+.drink-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 50% 110%, var(--gold-glow) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.drink-card:hover::before { opacity: 1; }
+.drink-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200,120,42,0.28);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+
+/* Active / Signature card */
+.drink-card.featured {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold), 0 8px 40px rgba(200,120,42,0.22);
+}
+
+.drink-card.featured::before { opacity: 1; }
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge-signature {
+  background: rgba(200,120,42,0.22);
+  border: 1px solid rgba(200,120,42,0.5);
+  color: var(--gold-light);
+}
+
+.badge-new {
+  background: rgba(200,120,42,0.18);
+  border: 1px solid rgba(200,120,42,0.4);
+  color: var(--gold-light);
+}
+
+.badge svg { width: 11px; height: 11px; fill: var(--gold-light); }
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.badge-icon{
+  width: 11px;
+  height: 11px;
+  min-width: 11px;
+  min-height: 11px;
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Drink image */
+.drink-img-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 220px;
+  margin-bottom: 16px;
+}
+
+.drink-image{
+  width: 90px;
+  height: 210px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,0.7));
+}
+
+.drink-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 32px;
+  background: radial-gradient(ellipse, rgba(200,120,42,0.22) 0%, transparent 70%);
+  filter: blur(6px);
+}
+
+/* SVG Drink illustrations */
+.drink-svg {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 12px 32px rgba(0,0,0,0.7));
+}
+
+/* Text */
+.drink-name {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.drink-desc {
+  font-size: 12.5px;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 14px;
+  font-weight: 300;
+}
+
+.drink-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin-bottom: 14px;
+}
+
+.drink-price {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ─── CHEF'S SPECIAL BANNER ──────────────────── */
+.chefs-special {
+  position: relative;
+  background: var(--card-bg2);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 260px;
+  margin-bottom: 0;
+}
+
+/* Decorative leaf SVG on right */
+.chefs-leaf {
+  position: absolute;
+  right: 24px;
+  bottom: 0;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.chefs-leaf svg { width: 180px; height: auto; }
+
+/* Food image panel */
+.chefs-img {
+  flex: 0 0 260px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 260px;
+}
+
+.food-svg {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 16px 32px rgba(0,0,0,0.8));
+}
+
+/* Text content */
+.chefs-content {
+  flex: 1;
+  padding: 44px 40px 44px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.chefs-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.chefs-title {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.chefs-sub {
+  font-size: 13.5px;
+  color: var(--gray);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.chefs-body {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 100px;
+  border: 1.5px solid var(--gold);
+  background: transparent;
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+
+.btn-explore:hover {
+  background: var(--gold);
+  color: #1A0E00;
+  box-shadow: 0 6px 24px rgba(200,120,42,0.3);
+}
+
+.btn-explore svg { width: 16px; height: 16px; transition: transform 0.2s; }
+.btn-explore:hover svg { transform: translateX(3px); }
+
+/* ─── FOOTER ─────────────────────────────────── */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-copy {
+  font-size: 12.5px;
+  color: var(--gray);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer-links li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  transition: color 0.18s;
+}
+
+.footer-links li:hover { color: var(--gold-light); }
+
+.footer-dot {
+  color: var(--gold);
+  font-size: 10px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-social-label {
+  font-size: 12.5px;
+  color: var(--gray);
+  margin-right: 6px;
+}
+
+.social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.18s;
+}
+
+.social-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.social-btn svg { width: 14px; height: 14px; }
+
+/* ─── ANIMATIONS ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.site-header   { animation: fadeUp 0.5s ease both; }
+.drinks-grid   { animation: fadeUp 0.5s 0.1s ease both; }
+.chefs-special { animation: fadeUp 0.5s 0.2s ease both; }
